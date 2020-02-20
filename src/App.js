@@ -3,16 +3,16 @@ import './App.css';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
+
 class App extends Component{
 
   state = {
-    username: 'supermanuel'
+    username:'Super Manuel'
   }
 
   usernameChangedHandler =(event) => {
 
-    this.setState ({username: event.target.value})
-
+    this.setState ({username: event.target.value});
 
   }
 
@@ -36,7 +36,8 @@ class App extends Component{
         </ol>
     
 
-        <UserInput />
+        <UserInput 
+        changed= {this.usernameChangedHandler}/>
         <UserOutput userName= {this.state.username} />
         <UserOutput userName= {this.state.username}/>
         <UserOutput userName= "Manuel"/>
